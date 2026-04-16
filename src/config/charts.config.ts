@@ -1,0 +1,73 @@
+import type { ChartDef } from "@/types";
+
+export const charts: ChartDef[] = [
+  {
+    id: "registrosPorTipoBeneficio",
+    title: "Registros por Tipo de Benefício",
+    kind: "bar",
+    groupBy: "tipoBeneficio",
+    aggregate: "count",
+  },
+  {
+    id: "registrosPorUnidadeEnsino",
+    title: "Registros por Unidade de Ensino",
+    kind: "bar",
+    groupBy: "unidadeEnsino",
+    aggregate: "count",
+  },
+  {
+    id: "registrosPorCurso",
+    title: "Registros por Curso (Top 15)",
+    kind: "bar",
+    groupBy: "curso",
+    aggregate: "count",
+    topN: 15,
+  },
+  {
+    id: "distribuicaoSituacaoSau",
+    title: "Distribuição por Situação SAU",
+    kind: "pie",
+    groupBy: "situacaoSau",
+    aggregate: "count",
+  },
+  {
+    id: "registrosPorAnoSituacao",
+    title: "Registros por Ano Situação",
+    kind: "line",
+    groupBy: "anoSituacao",
+    aggregate: "count",
+  },
+  {
+    id: "registrosPorMesSituacao",
+    title: "Registros por Mês Situação",
+    kind: "bar",
+    groupBy: "mesSituacao",
+    aggregate: "count",
+  },
+  {
+    id: "reprovacaoFaltaPorCurso",
+    title: "Reprovação por Falta por Curso (Top 15)",
+    kind: "barHorizontal",
+    groupBy: "curso",
+    aggregate: "sum",
+    valueField: "reprovacaoPorFalta",
+    topN: 15,
+  },
+  {
+    id: "reprovacaoNotaPorCurso",
+    title: "Reprovação por Nota por Curso (Top 15)",
+    kind: "barHorizontal",
+    groupBy: "curso",
+    aggregate: "sum",
+    valueField: "reprovacaoPorNota",
+    topN: 15,
+  },
+  {
+    id: "totalReprovacoesPorTipoBeneficio",
+    title: "Total Reprovações (Falta + Nota) por Tipo de Benefício",
+    kind: "bar",
+    groupBy: "tipoBeneficio",
+    aggregate: "sum",
+    valueField: "reprovacaoPorFalta",
+  },
+];
