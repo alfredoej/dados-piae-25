@@ -1,6 +1,6 @@
 # PIAE 2025 · Dashboard Analítico
 
-Aplicação **100% front-end** (React + TypeScript + Vite + Tailwind + Papa Parse + Apache ECharts) para análise local de dados do PIAE 2025. O CSV é processado inteiramente no navegador — sem backend, sem banco, sem `localStorage`.
+Aplicação **100% front-end** (React + TypeScript + Vite + Tailwind + Papa Parse + Apache ECharts) para análise local de dados do PIAE. O CSV é processado inteiramente no navegador — sem backend, sem banco, sem `localStorage`.
 
 ## Requisitos
 
@@ -32,7 +32,7 @@ npm run preview
 
 1. Abra a aplicação no navegador.
 2. Clique em **Escolher arquivo CSV** (ou arraste o arquivo para a área de upload).
-3. Selecione o `PIAE2025.csv` (ou outro arquivo com o mesmo schema).
+3. Selecione o `.csv` (ou outro arquivo com o mesmo schema).
 4. O dashboard é renderizado automaticamente com KPIs, gráficos e tabela analítica.
 5. Use os filtros globais para refinar a análise.
 6. Alterne entre modo claro/escuro pelo botão no cabeçalho.
@@ -52,7 +52,6 @@ npm run preview
 | REPROVACAO POR FALTA | reprovacaoPorFalta    | int    |
 | REPROVACAO POR NOTA  | reprovacaoPorNota     | int    |
 
-> O alias `UNIDADE` é aceito e mapeado automaticamente para `UNIDADE ENSINO`.
 
 ## Arquitetura
 
